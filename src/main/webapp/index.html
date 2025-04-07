@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Cadastrar funcionário</title>
+<style>
+        body {
+            margin: 0;
+            height: 100vh; 
+            display: flex;
+            justify-content: center; 
+           /* align-items: center;   */   
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        input, select {
+            width: 200px;
+            padding: 5px;
+        }
+
+        .links {
+            margin-top: 15px;
+        }
+        
+        a{
+        	text-decoration: none;
+        }
+        
+        
+</style>
+</head>
+<body>
+<div class="conteiner">
+	<h1>Adicionar funcionário</h1>
+	<form action="SaveServlet" method="post">
+		<table>
+			<tr>
+				<td>Nome:</td>
+				<td><input type="text" name="name" /></td>
+			</tr>
+			<tr>
+				<td>Senha:</td>
+				<td><input type="password" name="password" /></td>
+			</tr>
+			<tr>
+				<td>Email:</td>
+				<td><input type="email" name="email" /></td>
+			</tr>
+			<tr>
+				<td>País:</td>
+				<td><select name="country" style="width: 150px">
+						<option>Brasil</option>
+						<option>India</option>
+						<option>USA</option>
+						<option>UK</option>
+						<option>Other</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td colspan="2"><input type="submit" value="Cadastrar" style="width: 100%" /></td>
+			</tr>
+
+		</table>
+	</form>
+	<br />
+	<button><a href="ViewServlet">Ver funcionários</a></button> <br><br>
+	<button><a href="dupla.html">Dupla do trabalho</a></button>
+</div>
+</body>
+</html>
